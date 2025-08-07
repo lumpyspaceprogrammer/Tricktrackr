@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tricktrackr – Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>Tricktrackr Login</h1>
+    <form class="brutalist-form" onsubmit="localStorage.setItem('isLoggedIn', true)">
+      <label>
+        Email or Username:<br>
+        <input type="text" required>
+      </label>
+      <label>
+        Password:<br>
+        <input type="password" required>
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+  </main>
+</body>
+</html>
