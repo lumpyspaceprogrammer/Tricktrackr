@@ -2,33 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tricktrackr – Dashboard</title>
+  <title>TrickTrackr – Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <script>
-    if (!localStorage.getItem('isLoggedIn')) window.location.href = "login.html";
+    if (!localStorage.getItem('isLoggedIn')) window.location.href = "index.html";
   </script>
   <header>
-    <h1>Welcome to Tricktrackr</h1>
-    <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="places.html">Spots</a>
-      <a href="post-review.html">Add Review</a>
-      <a href="messaging.html">Messages</a>
-      <a href="resources.html">Resources</a>
-      <a href="profile.html">Profile</a>
-      <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='login.html'">Logout</a>
-    </nav>
+    <img src="https://placehold.co/80x80?text=TT" class="logo" alt="TrickTrackr Logo">
+    <h1>TrickTrackr</h1>
   </header>
+  <nav>
+    <a href="dashboard.html">Home</a>
+    <a href="rate-client.html">Rate a Client</a>
+    <a href="client-reports.html">Client Reports</a>
+    <a href="messaging.html">Messages</a>
+    <a href="resources.html">Resources</a>
+    <a href="profile.html">Profile</a>
+    <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='index.html'">Logout</a>
+  </nav>
   <main>
-    <img src="https://placehold.co/300x200?text=Skate+Spot" alt="Skateboarder" style="max-width:300px;border:3px solid #1a1a1a;margin-bottom:2rem;">
-    <h2>Your Dashboard</h2>
-    <p>Welcome, [username]! Here’s what’s new and happening in your skate community.</p>
+    <div class="stickers">
+      <img src="https://em-content.zobj.net/source/telegram/386/pink-heart_1fa77.png" alt="Heart sticker">
+      <img src="https://em-content.zobj.net/source/telegram/386/sparkles_2728.png" alt="Sparkle sticker">
+    </div>
+    <h2>Welcome, [username]!</h2>
+    <p>This is your secure dashboard. View recent client reports, connect with other providers, and access resources to help you stay safe.</p>
     <ul>
-      <li>New reviews for your favorite spots</li>
-      <li>Messages from local skaters</li>
-      <li>Upcoming skate events</li>
+      <li>New client reviews</li>
+      <li>Private messages from other members</li>
+      <li>Safety alerts and updates</li>
     </ul>
   </main>
 </body>
