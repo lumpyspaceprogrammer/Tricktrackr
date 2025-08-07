@@ -1,22 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Trick Trackr – Resources</title>
+  <title>Tricktrackr – Spots</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <script>
+    if (!localStorage.getItem('isLoggedIn')) window.location.href = "login.html";
+  </script>
   <header>
-    <a href="index.html" class="back-link">← Home</a>
-    <h1>Resources</h1>
+    <h1>Skate Spots</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="places.html">Spots</a>
+      <a href="post-review.html">Add Review</a>
+      <a href="messaging.html">Messages</a>
+      <a href="resources.html">Resources</a>
+      <a href="profile.html">Profile</a>
+      <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='login.html'">Logout</a>
+    </nav>
   </header>
   <main>
-    <ul class="resource-list">
-      <li><a href="#">Beginner’s Skate Guide (PDF)</a></li>
-      <li><a href="#">Local Skate Shops</a></li>
-      <li><a href="#">Skateboarding Safety Tips</a></li>
-    </ul>
+    <section class="spot-list">
+      <article class="spot-card">
+        <img src="https://placehold.co/300x200?text=Spot+Photo" alt="Wallride Plaza" class="spot-img">
+        <h2>Wallride Plaza</h2>
+        <p>Downtown - Smooth ledges and rails</p>
+        <a href="post-review.html" class="cta-btn">Add Review</a>
+      </article>
+      <article class="spot-card">
+        <img src="https://placehold.co/300x200?text=Spot+Photo" alt="Kickflip Park" class="spot-img">
+        <h2>Kickflip Park</h2>
+        <p>East Side - Banks and stairs</p>
+        <a href="post-review.html" class="cta-btn">Add Review</a>
+      </article>
+      <!-- More spot-card articles as needed -->
+    </section>
   </main>
 </body>
 </html>
