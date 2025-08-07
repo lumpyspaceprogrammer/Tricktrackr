@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tricktrackr – Rate a Customer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script>
+    if (!localStorage.getItem('isLoggedIn')) window.location.href = "login.html";
+  </script>
+  <header>
+    <h1>Rate a Customer</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="places.html">Spots</a>
+      <a href="post-review.html">Add Review</a>
+      <a href="messaging.html">Messages</a>
+      <a href="resources.html">Resources</a>
+      <a href="profile.html">Profile</a>
+      <a href="rate-customer.html">Rate Customer</a>
+      <a href="customer-ratings.html">Customer Ratings</a>
+      <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='login.html'">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <form class="brutalist-form">
+      <label>
+        Customer Name or Alias:<br>
+        <input
