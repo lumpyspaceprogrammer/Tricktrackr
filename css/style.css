@@ -1,222 +1,103 @@
-:root {
-  --background: #f7f7f7;
-  --primary: #1a1a1a;
-  --accent: #ff5a36;
-  --secondary: #fdea1a;
-  --border: #1a1a1a;
-  --card: #fff;
-}
-
-* {
-  box-sizing: border-box;
-}
+/* MySpace 2000s Vibe CSS for TrickTrackr */
 
 body {
-  background: var(--background);
-  color: var(--primary);
-  font-family: 'Arial Black', Arial, sans-serif;
+  background: #1e2631 url('https://i.imgur.com/IyiR3Wc.jpg') repeat; /* dark bg + subtle texture */
+  color: #ffffff;
+  font-family: Verdana, Arial, Tahoma, 'Comic Sans MS', sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
 }
 
 header {
-  background: var(--secondary);
-  border-bottom: 4px solid var(--border);
-  padding: 1rem 2rem;
-  text-align: center;
+  background: linear-gradient(to bottom, #3b4b5b 0%, #222f3d 100%);
+  border-bottom: 4px solid #b7c0ce;
+  box-shadow: 0 4px 20px #0008;
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: left;
+}
+
+header .logo {
+  float: left;
+  margin-right: 1rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: #222c38;
 }
 
 header h1 {
+  color: #fff;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
   font-size: 2.5rem;
-  margin: 0 0 0.5rem 0;
-  text-transform: uppercase;
+  margin: 0;
   letter-spacing: 2px;
-  color: var(--primary);
-  text-shadow: 3px 3px 0 var(--accent);
+  text-shadow: 2px 2px 4px #000b, 0 1px 0 #fff8;
+  display: inline-block;
 }
 
 nav {
-  margin: 1rem 0;
+  background: #222c38;
+  border: 2px solid #b7c0ce;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0009;
+  padding: 0.7rem 0.5rem;
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 nav a {
-  color: var(--accent);
-  background: var(--card);
-  border: 2px solid var(--border);
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
+  color: #f5e887;
+  background: #3b4b5b;
+  border: 1.5px solid #b7c0ce;
+  border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 3px 3px 0 var(--border);
-  transition: background 0.2s, color 0.2s;
+  padding: 0.5rem 1.2rem;
+  margin: 0.2rem;
+  box-shadow: 2px 2px 0 #0006;
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
 }
 
 nav a:hover {
-  background: var(--accent);
-  color: var(--card);
+  background: #f5e887;
+  color: #222c38;
+  text-decoration: underline;
+  transform: scale(1.07);
 }
 
 main {
-  padding: 2rem max(2vw, 1rem);
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 920px;
+  margin: 2.5rem auto 2rem auto;
+  background: #242c39;
+  border: 4px solid #b7c0ce;
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 40px #000a;
+  min-height: 60vh;
 }
 
 h2, h3 {
-  text-transform: uppercase;
+  color: #f5e887;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 1.3rem;
   letter-spacing: 1px;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 0 #000a, 0 1px 0 #fff4;
 }
 
-.cta-btn {
+.cta-btn, button, input[type=submit] {
   display: inline-block;
-  background: var(--accent);
-  color: var(--card);
-  border: 3px solid var(--border);
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 2rem;
-  box-shadow: 4px 4px 0 var(--border);
-  transition: background 0.2s, color 0.2s;
-}
-
-.cta-btn:hover {
-  background: var(--primary);
-  color: var(--secondary);
-}
-
-.brutalist-form {
-  background: var(--card);
-  border: 3px solid var(--border);
-  padding: 2rem;
-  box-shadow: 6px 6px 0 var(--border);
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.brutalist-form label {
-  font-weight: bold;
-  margin-bottom: 0.3rem;
-}
-
-.brutalist-form input,
-.brutalist-form select,
-.brutalist-form textarea {
-  border: 2px solid var(--border);
-  padding: 0.5rem;
-  background: var(--background);
-  font-size: 1rem;
+  background: linear-gradient(90deg, #f5e887 60%, #fff8b7 100%);
+  color: #1e2631;
+  border: 1.5px solid #b7c0ce;
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.12rem;
   font-family: inherit;
-  box-shadow: 2px 2px 0 var(--border);
-  margin-top: 0.5rem;
-}
-
-.brutalist-form button {
-  background: var(--accent);
-  color: var(--card);
-  border: 2px solid var(--border);
   font-weight: bold;
-  font-size: 1.05rem;
-  padding: 0.7rem 1.5rem;
-  box-shadow: 3px 3px 0 var(--border);
-  cursor: pointer;
-}
-
-.back-link {
-  color: var(--primary);
-  background: var(--secondary);
-  border: 2px solid var(--border);
-  padding: 0.5rem 1rem;
   text-decoration: none;
-  font-weight: bold;
-  margin-right: 2rem;
-  box-shadow: 2px 2px 0 var(--border);
-  transition: background 0.2s;
-}
-
-.back-link:hover {
-  background: var(--accent);
-  color: var(--card);
-}
-
-.spot-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.spot-card {
-  background: var(--card);
-  border: 3px solid var(--border);
-  padding: 1.5rem;
-  box-shadow: 4px 4px 0 var(--border);
-}
-
-.messages {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.message {
-  background: var(--card);
-  border: 2px solid var(--border);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 3px 3px 0 var(--accent);
-}
-
-.message.received {
-  border-left: 8px solid var(--accent);
-}
-
-.message.sent {
-  border-left: 8px solid var(--secondary);
-  background: var(--background);
-}
-
-.resource-list {
-  list-style: none;
-  padding: 0;
-}
-
-.resource-list li {
-  margin-bottom: 1.2rem;
-  font-size: 1.1rem;
-}
-
-.resource-list a {
-  color: var(--accent);
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-.profile-info img {
-  border: 3px solid var(--border);
-  background: var(--secondary);
-  box-shadow: 4px 4px 0 var(--accent);
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 600px) {
-  main {
-    padding: 1rem 0.5rem;
-  }
-
-  .brutalist-form {
-    padding: 1rem;
-  }
-}
+  margin-top: 1.2rem;
