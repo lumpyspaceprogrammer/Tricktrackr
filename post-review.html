@@ -1,1 +1,41 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trick Trackr – Add Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-link">← Back</a>
+    <h1>Add a Spot Review</h1>
+  </header>
+  <main>
+    <form class="brutalist-form">
+      <label>
+        Spot Name:<br>
+        <input type="text" name="spot" required>
+      </label><br>
+      <label>
+        Location:<br>
+        <input type="text" name="location" required>
+      </label><br>
+      <label>
+        Rating:<br>
+        <select name="rating">
+          <option>1 – Lame</option>
+          <option>2</option>
+          <option>3 – Meh</option>
+          <option>4</option>
+          <option>5 – Epic</option>
+        </select>
+      </label><br>
+      <label>
+        Review:<br>
+        <textarea name="review" rows="5"></textarea>
+      </label><br>
+      <button type="submit">Submit Review</button>
+    </form>
+  </main>
+</body>
+</html>
