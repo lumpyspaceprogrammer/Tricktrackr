@@ -2,41 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tricktrackr – Spots</title>
+  <title>TrickTrackr – Rate a Client</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <script>
-    if (!localStorage.getItem('isLoggedIn')) window.location.href = "login.html";
+    if (!localStorage.getItem('isLoggedIn')) window.location.href = "index.html";
   </script>
   <header>
-    <h1>Skate Spots</h1>
-    <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="places.html">Spots</a>
-      <a href="post-review.html">Add Review</a>
-      <a href="messaging.html">Messages</a>
-      <a href="resources.html">Resources</a>
-      <a href="profile.html">Profile</a>
-      <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='login.html'">Logout</a>
-    </nav>
+    <img src="https://placehold.co/80x80?text=TT" class="logo" alt="TrickTrackr Logo">
+    <h1>TrickTrackr</h1>
   </header>
+  <nav>
+    <a href="dashboard.html">Home</a>
+    <a href="rate-client.html">Rate a Client</a>
+    <a href="client-reports.html">Client Reports</a>
+    <a href="messaging.html">Messages</a>
+    <a href="resources.html">Resources</a>
+    <a href="profile.html">Profile</a>
+    <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='index.html'">Logout</a>
+  </nav>
   <main>
-    <section class="spot-list">
-      <article class="spot-card">
-        <img src="https://placehold.co/300x200?text=Spot+Photo" alt="Wallride Plaza" class="spot-img">
-        <h2>Wallride Plaza</h2>
-        <p>Downtown - Smooth ledges and rails</p>
-        <a href="post-review.html" class="cta-btn">Add Review</a>
-      </article>
-      <article class="spot-card">
-        <img src="https://placehold.co/300x200?text=Spot+Photo" alt="Kickflip Park" class="spot-img">
-        <h2>Kickflip Park</h2>
-        <p>East Side - Banks and stairs</p>
-        <a href="post-review.html" class="cta-btn">Add Review</a>
-      </article>
-      <!-- More spot-card articles as needed -->
-    </section>
+    <h2>Rate a Client</h2>
+    <form class="brutalist-form">
+      <label>
+        Client Name or Alias<br>
+        <input type="text" name="client_name" required>
+      </label>
+      <label>
+        Star Rating<br>
+        <select name="stars" required>
+          <option value="1">★☆☆☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="4">★★★★☆</option>
+          <option value="5">★★★★★</option>
+        </select>
+      </label>
+      <label>
+        Description (optional)<br>
+        <textarea name="description" rows="4" placeholder="Describe your experience (safety, respect, boundaries, etc.)"></textarea>
+      </label>
+      <label>
+        Photo (optional)<br>
+        <input type="file" accept="image/*" name="photo">
+      </label>
+      <label>
+        Place Met (optional)<br>
+        <input type="text" name="place">
+      </label>
+      <label>
+        Social Media (optional)<br>
+        <input type="url" name="social_media" placeholder="https://social.site/username">
+      </label>
+      <label>
+        Phone Number (optional)<br>
+        <input type="tel" name="phone">
+      </label>
+      <button type="submit" class="cta-btn">Submit Client Report</button>
+    </form>
+    <p style="margin-top:1rem;color:#555;">All client reports are visible only to verified providers.</p>
   </main>
 </body>
 </html>
