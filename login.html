@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tricktrackr – Login</title>
+  <title>TrickTrackr – Login</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header>
+    <img src="https://placehold.co/80x80?text=TT" class="logo" alt="TrickTrackr Logo">
+    <h1>TrickTrackr</h1>
+  </header>
   <main>
-    <h1>Tricktrackr Login</h1>
+    <div class="stickers">
+      <img src="https://em-content.zobj.net/source/telegram/386/pink-heart_1fa77.png" alt="Heart sticker">
+      <img src="https://em-content.zobj.net/source/telegram/386/sparkles_2728.png" alt="Sparkle sticker">
+    </div>
+    <h2>Login to the Private Client Safety Community</h2>
+    <p style="font-size:1.1em;">A trusted, supportive space for sex workers to share and review client experiences, stay safe, and look out for each other.</p>
     <form class="brutalist-form" onsubmit="localStorage.setItem('isLoggedIn', true)">
       <label>
-        Email or Username:<br>
+        Username or Email<br>
         <input type="text" required>
       </label>
       <label>
-        Password:<br>
+        Password<br>
         <input type="password" required>
       </label>
-      <button type="submit">Login</button>
+      <button type="submit" class="cta-btn">Login</button>
     </form>
     <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
   </main>
