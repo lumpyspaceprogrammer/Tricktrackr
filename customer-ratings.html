@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tricktrackr – Customer Ratings</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script>
+    if (!localStorage.getItem('isLoggedIn')) window.location.href = "login.html";
+  </script>
+  <header>
+    <h1>Customer Ratings</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="places.html">Spots</a>
+      <a href="post-review.html">Add Review</a>
+      <a href="messaging.html">Messages</a>
+      <a href="resources.html">Resources</a>
+      <a href="profile.html">Profile</a>
+      <a href="rate-customer.html">Rate Customer</a>
+      <a href="customer-ratings.html">Customer Ratings</a>
+      <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='login.html'">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <section class="spot-list">
+      <!-- Example Customer Rating Card -->
+      <article class="spot-card">
+        <img src="https://placehold.co/120x120?text=Photo" alt="Customer Photo" style="float:right;margin-left:1rem;">
+        <h2>Jane Doe</h2>
+        <div>
+          <span style="font-size:1.5em;color:#ff5a36;">★★★★★</span>
+        </div>
+        <p><strong>Description:</strong> Very respectful and punctual. Would meet again.</p>
+        <p><strong>Place Met:</strong> Wallride Plaza</p>
+        <p><strong>Social Media:</strong> <a href="#">@janedoe</a></p>
+        <p><strong>Phone:</strong> (555) 123-4567</p>
+      </article>
+      <!-- Add more spot-card articles for each rating -->
+    </section>
+    <a href="rate-customer.html" class="cta-btn" style="margin-top:2rem;">Add New Customer Rating</a>
+    <p style="margin-top:2rem;color:#555;font-size:0.9em;">Customer ratings are visible only to verified account users.</p>
+  </main>
+</body>
+</html>
