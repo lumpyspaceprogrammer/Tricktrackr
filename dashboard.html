@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tricktrackr – Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script>
+    if (!localStorage.getItem('isLoggedIn')) window.location.href = "login.html";
+  </script>
+  <header>
+    <h1>Welcome to Tricktrackr</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="places.html">Spots</a>
+      <a href="post-review.html">Add Review</a>
+      <a href="messaging.html">Messages</a>
+      <a href="resources.html">Resources</a>
+      <a href="profile.html">Profile</a>
+      <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='login.html'">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <img src="https://placehold.co/300x200?text=Skate+Spot" alt="Skateboarder" style="max-width:300px;border:3px solid #1a1a1a;margin-bottom:2rem;">
+    <h2>Your Dashboard</h2>
+    <p>Welcome, [username]! Here’s what’s new and happening in your skate community.</p>
+    <ul>
+      <li>New reviews for your favorite spots</li>
+      <li>Messages from local skaters</li>
+      <li>Upcoming skate events</li>
+    </ul>
+  </main>
+</body>
+</html>
