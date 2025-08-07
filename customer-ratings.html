@@ -2,45 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tricktrackr – Customer Ratings</title>
+  <title>TrickTrackr – Rate a Client</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <script>
-    if (!localStorage.getItem('isLoggedIn')) window.location.href = "login.html";
+    if (!localStorage.getItem('isLoggedIn')) window.location.href = "index.html";
   </script>
   <header>
-    <h1>Customer Ratings</h1>
-    <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="places.html">Spots</a>
-      <a href="post-review.html">Add Review</a>
-      <a href="messaging.html">Messages</a>
-      <a href="resources.html">Resources</a>
-      <a href="profile.html">Profile</a>
-      <a href="rate-customer.html">Rate Customer</a>
-      <a href="customer-ratings.html">Customer Ratings</a>
-      <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='login.html'">Logout</a>
-    </nav>
+    <img src="https://placehold.co/80x80?text=TT" class="logo" alt="TrickTrackr Logo">
+    <h1>TrickTrackr</h1>
   </header>
+  <nav>
+    <a href="dashboard.html">Home</a>
+    <a href="rate-client.html">Rate a Client</a>
+    <a href="client-reports.html">Client Reports</a>
+    <a href="messaging.html">Messages</a>
+    <a href="resources.html">Resources</a>
+    <a href="profile.html">Profile</a>
+    <a href="#" onclick="localStorage.removeItem('isLoggedIn'); location.href='index.html'">Logout</a>
+  </nav>
   <main>
-    <section class="spot-list">
-      <!-- Example Customer Rating Card -->
-      <article class="spot-card">
-        <img src="https://placehold.co/120x120?text=Photo" alt="Customer Photo" style="float:right;margin-left:1rem;">
-        <h2>Jane Doe</h2>
-        <div>
-          <span style="font-size:1.5em;color:#ff5a36;">★★★★★</span>
-        </div>
-        <p><strong>Description:</strong> Very respectful and punctual. Would meet again.</p>
-        <p><strong>Place Met:</strong> Wallride Plaza</p>
-        <p><strong>Social Media:</strong> <a href="#">@janedoe</a></p>
-        <p><strong>Phone:</strong> (555) 123-4567</p>
-      </article>
-      <!-- Add more spot-card articles for each rating -->
-    </section>
-    <a href="rate-customer.html" class="cta-btn" style="margin-top:2rem;">Add New Customer Rating</a>
-    <p style="margin-top:2rem;color:#555;font-size:0.9em;">Customer ratings are visible only to verified account users.</p>
+    <h2>Rate a Client</h2>
+    <form class="brutalist-form">
+      <label>
+        Client Name or Alias<br>
+        <input type="text" name="client_name" required>
+      </label>
+      <label>
+        Star Rating<br>
+        <select name="stars" required>
+          <option value="1">★☆☆☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="4">★★★★☆</option>
+          <option value="5">★★★★★</option>
+        </select>
+      </label>
+      <label>
+        Description (optional)<br>
+        <textarea name="description" rows="4" placeholder="Describe your experience (safety, respect, boundaries, etc.)"></textarea>
+      </label>
+      <label>
+        Photo (optional)<br>
+        <input type="file" accept="image/*" name="photo">
+      </label>
+      <label>
+        Place Met (optional)<br>
+        <input type="text" name="place">
+      </label>
+      <label>
+        Social Media (optional)<br>
+        <input type="url" name="social_media" placeholder="https://social.site/username">
+      </label>
+      <label>
+        Phone Number (optional)<br>
+        <input type="tel" name="phone">
+      </label>
+      <button type="submit" class="cta-btn">Submit Client Report</button>
+    </form>
+    <p style="margin-top:1rem;color:#555;">All client reports are visible only to verified providers.</p>
   </main>
 </body>
 </html>
